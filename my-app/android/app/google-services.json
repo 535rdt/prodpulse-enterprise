@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1023100975920",
+    "project_id": "prodpulse-cloud",
+    "storage_bucket": "prodpulse-cloud.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023100975920:android:e670a9be7f4ccf92a526f5",
+        "android_client_info": {
+          "package_name": "com.production.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023100975920-9lacvn4166ca2t3f77gcebv81ucp81vs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuqJEfTFRFF9WTMUjKeN0wJeFNduM6w34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023100975920-9lacvn4166ca2t3f77gcebv81ucp81vs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

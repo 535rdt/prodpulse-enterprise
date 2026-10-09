@@ -1,0 +1,100 @@
+{
+  "name": "prodpulse-app",
+  "private": true,
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "electron/main.js",
+  "author": "ProdPulse Technologies",
+  "description": "Enterprise Shop Floor, Work Orders & Material Telemetry Platform",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "electron:dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && cross-env NODE_ENV=development electron .\"",
+    "electron:build": "vite build && electron-builder --win --x64",
+    "android:sync": "cap sync android",
+    "android:open": "cap open android"
+  },
+  "build": {
+    "appId": "com.prodpulse.enterprise",
+    "productName": "ProdPulse Enterprise",
+    "directories": {
+      "output": "dist_electron",
+      "buildResources": "build"
+    },
+    "asar": true,
+    "compression": "maximum",
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "build/**/*",
+      "!**/android/**",
+      "!**/node_modules/@capacitor/android/**"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "ProdPulse Enterprise",
+      "runAfterFinish": true,
+      "artifactName": "ProdPulse-Enterprise-Setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "ProdPulse-Enterprise-Portable-${version}.${ext}"
+    }
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/app": "^6.0.3",
+    "@capacitor/camera": "^6.1.3",
+    "@capacitor/core": "^6.2.0",
+    "@capacitor/haptics": "^6.0.3",
+    "@capacitor/toast": "^6.0.4",
+    "@codetrix-studio/capacitor-google-auth": "^3.4.0-rc.4",
+    "@tailwindcss/vite": "^4.3.3",
+    "autoprefixer": "^10.6.1",
+    "es-toolkit": "^1.52.0",
+    "firebase": "^13.0.0",
+    "framer-motion": "^14.0.0",
+    "localforage": "^1.10.0",
+    "lucide-react": "^0.475.0",
+    "postcss": "^8.5.29",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.2.0",
+    "recharts": "^3.10.1",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "electron": "^34.2.0",
+    "electron-builder": "^25.1.8",
+    "oxlint": "^1.81.0",
+    "vite": "^5.2.0",
+    "wait-on": "^8.0.2"
+  }
+}

@@ -1,0 +1,64 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build artifacts & packages
+dist/
+**/dist/
+dist_electron/
+**/dist_electron/
+build/
+**/build/
+
+# Android SDK, Gradle cache & local build outputs
+android-sdk/
+**/android-sdk/
+.gradle/
+**/.gradle/
+local.properties
+**/local.properties
+captures/
+**/captures/
+.externalNativeBuild/
+**/.externalNativeBuild/
+.cxx/
+**/.cxx/
+
+# Binaries & Distribution Installers
+*.apk
+*.aab
+*.exe
+*.msix
+*.appx
+*.blockmap
+*.zip
+
+# Sensitive Credentials & Keystores
+certs/
+**/certs/
+*.jks
+*.keystore
+*.p8
+*.p12
+*.key
+*.cer
+*.crt
+
+# IDE & OS files
+.idea/
+**/.idea/
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary logs & test screenshots
+screen*.png
+device_screen.png
+*.log

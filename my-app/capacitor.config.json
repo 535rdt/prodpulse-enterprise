@@ -1,0 +1,13 @@
+{
+  "appId": "com.production.app",
+  "appName": "ProdPulse Enterprise",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "plugins": {
+    "GoogleAuth": {
+      "scopes": ["profile", "email"],
+      "serverClientId": "1023100975920-9lacvn4166ca2t3f77gcebv81ucp81vs.apps.googleusercontent.com",
+      "forceCodeForRefreshToken": true
+    }
+  }
+}

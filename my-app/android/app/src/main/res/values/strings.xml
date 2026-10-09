@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ProdPulse Enterprise</string>
+    <string name="title_activity_main">ProdPulse Enterprise</string>
+    <string name="package_name">com.production.app</string>
+    <string name="custom_url_scheme">com.production.app</string>
+    <string name="server_client_id">1023100975920-9lacvn4166ca2t3f77gcebv81ucp81vs.apps.googleusercontent.com</string>
+</resources>
